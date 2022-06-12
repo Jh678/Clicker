@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    /*background-color: palegreen;*/
+    /*color: #3CB371;*/
+    background-size: 100%;
+    background-image: url(../imgs/eda.png);
+}
+img{
+    width: 85%;
+}
+
+
+h2{
+    color: #FFFFFF;
+    padding-top: 100px;
+    font-size: 40px;
+    font-family: Noto Sans, sans-serif;
+    text-shadow: 0 0 20px #8B4513,0 0 30px #8B4513,0 0 40px #8B4513,0 0 50px #8B4513;
+}
+h1{
+    color: #FFFFFF;
+    padding-top: 50px;
+    font-size: 20px;
+    font-family: Noto Sans, sans-serif;
+    text-shadow: 0 0 10px #8B4513,0 0 20px #8B4513,0 0 30px #8B4513,0 0 40px #8B4513;
+}

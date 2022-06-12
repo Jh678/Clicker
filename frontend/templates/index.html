@@ -1,0 +1,83 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <title>Лучший кликер в мире</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <meta http-equiv="Refresh" content="10" />
+</head>
+<body>
+    <main class="app">
+        <nav class="nav">
+            Добро пожаловать, {{ user.username }}
+            <a href="{% url 'logout' %}">Выйти</a>
+            {% if core.coins >= 1000 %}
+                <p class="did">1000 кликов ГОТОВО!!!</p>
+            {% else %}
+                <p class="st">1000 кликов</p>
+            {% endif %}
+
+            {% if core.coins >= 10000 %}
+                <p class="did">10000 кликов ГОТОВО!!!</p>
+            {% else %}
+                <p class="st">10000 кликов</p>
+            {% endif %}
+
+            {% if core.coins >= 100000 %}
+                <p class="did">100000 кликов ГОТОВО!!!</p>
+            {% else %}
+                <p class="st">100000 кликов</p>
+            {% endif %}
+
+            {% if core.clikc_power >= 50 %}
+                <p class="did">Сила клика 50 ГОТОВО!!!</p>
+            {% else %}
+                <p class="st">Сила клика 50</p>
+            {% endif %}
+
+            {% if core.clikc_power >= 500 %}
+                <p class="did">Сила клика 500 ГОТОВО!!!</p>
+            {% else %}
+                <p class="st">Сила клика 500</p>
+            {% endif %}
+
+            {% if core.clikc_power >= 6666 %}
+                <p class="did">Сила клика 6666 ГОТОВО!!!</p>
+            {% else %}
+                <p class="st">Сила клика 6666</p>
+            {% endif %}
+
+            {% if core.coins >= 3000000 %}
+                <p class="did">3000000 кликов ГОТОВО!!!</p>
+            {% else %}
+                <p class="st">3000000 кликов</p>
+            {% endif %}
+        </nav>
+
+        <div class="container">
+            <a>Твоё количество кликов:</a>
+            <div id='coins'>{{core.coins}}</div>
+            <a>Твоя сила клика: </a>
+            <div><span id="clikc_power">{{ core.clikc_power }}</span></div>
+            {% comment %} <button onclick="call_click()">Нажми меня</button> {% endcomment %}
+            <img class='tsunade' src= "{% static 'imgs/tsunade.gif' %}" = onclick="call_click()">
+            <p>
+                Чем больше ты накликаешь, тем сильнее будет аппетит у госпожи Цунадэ. Не дай даме остаться голодной!
+            </p>
+        </div>
+
+        <aside class="boosts" id="boosts">
+            <h3>Бусты</h3>
+            <div class="boosts-holder" id="boosts-holder">
+                {% for boost in boosts %}
+                    <button class="boost" id="boost_{{boost.id}}" onclick="buy_boost({{boost.id}})">
+                        <p>lvl: <span id="boost_level">{{boost.level}}</span></p>
+                        <p>+<span id="boost_power">{{boost.power}}</span></p>
+                        <p><span id="boost_price">{{boost.price}}</span></p>
+                    </button>
+                {% endfor %}
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.app {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    font-family: Noto Sans, sans-serif;
+}
+.nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 100px;
+    padding-top: 15px;
+    font-family: Noto Sans, sans-serif;
+}
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: Noto Sans, sans-serif;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+.boosts {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 100%;
+    font-family: Noto Sans, sans-serif;
+}
+.tsunade{
+    cursor: pointer;
+    width: 85%;
+}
+
+body{
+    background-color: #CD853F;
+}
+
+.boost{
+    cursor: pointer;
+    background-color: #FFDEAD;
+}
+
+.st{
+    border: 1px outset black;
+    background-color: #FFDEAD;
+    border-radius: 40px;
+    text-align: center;
+    width: 35%;
+    height: 40px;
+    display: block;
+    padding-top: 15px;
+}
+
+.did{
+    border: 1px outset black;
+    background-color: #3CB371;
+    border-radius: 40px;
+    text-align: center;
+    width: 35%;
+    height: 40px;
+    display: block;
+    padding-top: 20px;
+}
